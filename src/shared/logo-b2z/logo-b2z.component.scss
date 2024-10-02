@@ -1,0 +1,30 @@
+.logomarca-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logomarca {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.logomarca-b {
+    color: #4285F4;
+    /* Azul Google */
+    font-size: 100px;
+}
+
+.logomarca-2 {
+    color: #EA4335;
+    /* Vermelho Google */
+    font-size: 140px;
+}
+
+.logomarca-z {
+    color: #FBBC05;
+    /* Amarelo Google */
+    font-size: 100px;
+}

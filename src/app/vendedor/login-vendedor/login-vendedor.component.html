@@ -1,0 +1,38 @@
+<div class="login-container">
+    <mat-card appearance="outlined" class="card-login">
+
+        <div class="logo">
+        <app-logo-b2z ></app-logo-b2z>
+    </div>
+  
+        <div class="login-form">
+            <div class="titulo">
+                <mat-card-title>Login</mat-card-title>
+            </div>
+            <div>
+                <mat-form-field appearance="outline" class="login-fields">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput [(ngModel)]="email" placeholder="gabriel@example.com" required >
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="login-fields">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput [(ngModel)]="senha" placeholder="password" [type]="hide() ? 'password':'text'" required />
+                    <button mat-icon-button
+                    mat-icon-button
+                    matSuffix
+                    (click)="clickEvent($event)"
+                    [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide()"
+                    >
+                        <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+            <div class="button-container">
+                <button mat-button color="primary" class="botao-cadastrar" (click)="cadastrar()">Cadastre-se</button>
+                <button mat-flat-button color="primary" (click)="login()">Login</button>
+            </div>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,36 @@
+<div class="tela">
+
+
+
+    <div class="menu-container">
+        
+        <div class="menu">
+
+            <div class="logo">
+                <app-logo-b2z></app-logo-b2z>
+            </div>
+
+            @for (categ of categorias; track $index) {
+                <button mat-button (click)="selecionarCategoria(categ)" 
+                    [class.selected]="categoriaSelecionada === categ">
+                    {{ categ }}
+                </button>
+            }
+
+        </div>
+
+    </div>
+
+
+
+    <div class="listagem">
+        <app-listagem-produto [categoria]="categoriaSelecionada!" [vendedor]="vendedor!"></app-listagem-produto>
+    </div>
+
+    <div class="cadastro">
+        <button mat-fab aria-label="Adicionar produto" (click)="cadastrar()">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+
+</div>

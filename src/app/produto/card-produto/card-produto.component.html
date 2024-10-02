@@ -1,0 +1,49 @@
+<div class="card">
+
+
+
+    <mat-card class="card-body">
+
+
+
+        <h5 class="card-title">{{ produto.nome }}</h5>
+
+        <div class="img-container">
+            <img class="card-img" src="{{ produto.imagem }}" alt="Imagem do produto">
+        </div>
+        <!-- <p class="card-text">{{ produto.imagem }}</p> -->
+
+        <div class="descricao">
+            <div class="descricao-posicao">{{ produto.descricao }}</div>
+        </div>
+
+        <div class="preco-container">
+            <div class="preco">{{ produto.preco | currency:'BRL':'symbol':'1.2-2'}}</div>
+            <div class="quantidade">Quantidade: {{ produto.quantidade }}</div>
+        </div>
+
+        <mat-card-actions>
+
+            <!-- <a href="#" class="item-acoes">Comprar</a> -->
+            <button class="item-acoes" mat-mini-fab (click)="excluir(produto)">
+                <mat-icon>delete</mat-icon>
+            </button>
+            <button class="item-acoes" mat-mini-fab (click)="editar(produto)">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button class="item-acoes" mat-mini-fab >
+                <mat-icon (click)="verHistorico()">history</mat-icon>
+            </button>
+
+        </mat-card-actions>
+        @if (abrirHistorico) {}
+            <app-historico-preco></app-historico-preco>
+
+
+
+    </mat-card>
+
+
+
+
+</div>

@@ -1,0 +1,136 @@
+{
+  "vendedores": [
+    {
+      "cpf": "00000000001",
+      "nome": "Gustavo Wagner",
+      "senha": "000000",
+      "id": "wag.guga@email.com",
+      "dataNascimento": "1980-04-23",
+      "produtos": []
+    }
+  ],
+  "produtos": [
+    {
+      "id": "2",
+      "nome": "Smartphone Samsung Galaxy S21",
+      "descricao": "Smartphone com tela AMOLED de 6.2 polegadas",
+      "preco": 3500,
+      "imagem": "https://a-static.mlcdn.com.br/800x560/smartphone-samsung-galaxy-s21-fe-128gb-preto-5g-6gb-ram-tela-64-cam-tripla-selfie-32mp/magazineluiza/233990000/fba9a8a39e79d42a5f8b8bba7117d1dd.jpg",
+      "categoria": [
+        "Eletrônicos"
+      ],
+      "dataCriacao": "2023-02-15T00:00:00.000Z",
+      "quantidade": 20,
+      "novo": true,
+      "ativo": true,
+      "vendedor": {
+        "id": 2,
+        "nome": "Maria Oliveira",
+        "email": "maria@loja.com"
+      }
+    },
+    {
+      "id": "3",
+      "nome": "Smart TV LG 55'",
+      "descricao": "Smart TV 4K com HDR10",
+      "preco": 4800,
+      "imagem": "https://a-static.mlcdn.com.br/800x560/smart-tv-55-4k-uhd-led-lg-55ur8750-wi-fi-bluetooth-alexa-3-hdmi-ia/magazineluiza/237454000/731e6e489337a206e6108e46ae553637.jpg",
+      "categoria": [
+        "Eletrônicos",
+        "TVs"
+      ],
+      "dataCriacao": "2023-03-20T00:00:00.000Z",
+      "quantidade": 5,
+      "novo": true,
+      "ativo": true,
+      "vendedor": {
+        "id": 3,
+        "nome": "Carlos Santos",
+        "email": "carlos@loja.com"
+      }
+    },
+    {
+      "id": "5",
+      "nome": "Geladeira Brastemp Frost Free",
+      "descricao": "Geladeira duplex Frost Free com capacidade de 375 litros",
+      "preco": "1",
+      "imagem": "https://a-static.mlcdn.com.br/800x560/geladeira-brastemp-frost-free-duplex-375l-inox-com-compartimento-extrafrio-fresh-zone-brm44hk/magazineluiza/013085700/9bd3cf67cb270761c0f089ddf1b17a2e.jpg",
+      "categoria": [
+        "Eletrodomésticos",
+        "Cozinha"
+      ],
+      "dataCriacao": "2023-05-10T00:00:00.000Z",
+      "quantidade": 8,
+      "novo": "false",
+      "ativo": true,
+      "vendedor": {
+        "id": 5,
+        "nome": "Paulo Ferreira",
+        "email": "paulo@loja.com"
+      }
+    },
+    {
+      "id": "6",
+      "nome": "Fone de Ouvido Bluetooth JBL",
+      "descricao": "Fone de ouvido sem fio com cancelamento de ruído",
+      "preco": 600,
+      "imagem": "https://a-static.mlcdn.com.br/800x560/headset-gamer-jbl-quantum-400/magazineluiza/225496800/8312e0b7ba2ad44b4dd36a6700aff62e.jpg",
+      "categoria": [
+        "Eletrônicos",
+        "Áudio"
+      ],
+      "dataCriacao": "2023-06-01T00:00:00.000Z",
+      "quantidade": 25,
+      "novo": true,
+      "ativo": true,
+      "vendedor": {
+        "id": 6,
+        "nome": "Roberta Lima",
+        "email": "roberta@loja.com"
+      }
+    },
+    {
+      "id": "7",
+      "nome": "Câmera Canon EOS Rebel",
+      "descricao": "Câmera DSLR com lente 18-55mm",
+      "preco": 3200,
+      "imagem": "https://a-static.mlcdn.com.br/800x560/camera-canon-eos-rebel-t100-18-55mm-iii/foto-centro/3047/66c1dccda02c4293e381dfc73a3827af.jpeg",
+      "categoria": [
+        "Eletrônicos",
+        "Câmeras"
+      ],
+      "dataCriacao": "2023-07-15T00:00:00.000Z",
+      "quantidade": 12,
+      "novo": true,
+      "ativo": true,
+      "vendedor": {
+        "id": 7,
+        "nome": "Felipe Alves",
+        "email": "felipe@loja.com"
+      }
+    },
+    {
+      "id": "9",
+      "nome": "Charizard",
+      "descricao": "carta rara do Charizard",
+      "preco": "1000",
+      "imagem": "https://www.pokemon.com/static-assets/content-assets/cms2/img/cards/web/SMP/SMP_EN_SM60.png",
+      "categoria": [
+        "Brinquedos",
+        "Outros"
+      ],
+      "dataCriacao": "2024-08-26T15:05:49.850Z",
+      "quantidade": 1,
+      "novo": "true",
+      "ativo": false,
+      "vendedor": {
+        "cpf": "",
+        "nome": "",
+        "senha": "",
+        "email": "",
+        "dataNascimento": "2024-08-26T15:05:49.850Z",
+        "produtos": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+<div class="cadastro-container">
+    <mat-card class="cadastro-form">
+      <mat-card-title>Cadastro vendedor</mat-card-title>
+  
+      <mat-form-field class="display-id">
+        <mat-label>ID</mat-label>
+        <input matInput disabled value="{{vendedor.id}}" placeholder="ID do vendedor" required />
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>CPF</mat-label>
+        <input matInput [(ngModel)]="vendedor.cpf" placeholder="Nome do vendedor" required />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="vendedor.nome" placeholder="Nome do vendedor" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="login-fields">
+        <mat-label>Enter your email</mat-label>
+        <input matInput [(ngModel)]="vendedor.email" placeholder="gabriel@example.com" required >
+    </mat-form-field>
+
+      <mat-form-field appearance="outline" class="login-fields">
+        <mat-label>Digite sua senha</mat-label>
+        <input matInput [(ngModel)]="vendedor.senha" placeholder="password" [type]="hide() ? 'password':'text'" required />
+        <button mat-icon-button
+        mat-icon-button
+        matSuffix
+        (click)="clickEvent($event)"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide()"
+        >
+            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput [(ngModel)]="vendedor.dataNascimento" [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-card-actions>
+        <button mat-raised-button color="warn" (click)="voltar()">Cancelar</button>
+        <button class="item-acao" mat-raised-button color="primary" (click)="cadastrar()">Cadastrar</button>
+      </mat-card-actions>
+   

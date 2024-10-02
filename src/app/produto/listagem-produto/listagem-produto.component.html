@@ -1,0 +1,5 @@
+<div class="listagem">
+    @for (p of produtosFiltrados; track $index) {
+    <app-card-produto (produtoRemovido)="excluir($event)" [produto]="p" [vendedor]="vendedor"></app-card-produto>
+    }
+</div>

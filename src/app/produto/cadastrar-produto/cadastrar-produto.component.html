@@ -1,0 +1,67 @@
+<div class="cadastro-container">
+  <mat-card class="cadastro-form">
+    <mat-card-title>{{titulo}}</mat-card-title>
+
+    <mat-form-field class="display-id">
+      <mat-label>ID</mat-label>
+      <input matInput disabled value="{{produto.id}}" placeholder="ID do produto" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="produto.nome" placeholder="Nome do produto" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Descriçao</mat-label>
+      <input matInput [(ngModel)]="produto.descricao"
+        placeholder="Descriçao(Ex: item funcionando perfeitamente, apenas 3 meses de uso ...)" maxlength="100" />
+    </mat-form-field>
+
+    <div>
+      <mat-label>Estado do produto:</mat-label>
+      <mat-radio-group [(ngModel)]="produto.novo" required>
+        <mat-radio-button value="true">Novo</mat-radio-button>
+        <mat-radio-button value="false">Usado</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Valor</mat-label>
+      <input matInput [(ngModel)]="produto.preco" placeholder="Valor do produto" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Quantidade</mat-label>
+      <input matInput [(ngModel)]="produto.quantidade" placeholder="Quantidade do produto" required type="number" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Imagem</mat-label>
+      <input matInput [(ngModel)]="produto.imagem" placeholder="URL da imagem" required />
+    </mat-form-field>
+
+    <!-- <mat-form-field>
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field> -->
+    <!-- <mat-chip-listbox [(ngModel)]="produto.categoria" multiple>
+      <mat-chip-option value="Eletrônicos">Eletrônicos</mat-chip-option>
+      <mat-chip-option value="Móveis">Móveis</mat-chip-option>
+      <mat-chip-option value="Roupas">Roupas</mat-chip-option>
+      <mat-chip-option value="Livros">Livros</mat-chip-option>
+      <mat-chip-option value="Brinquedos">Brinquedos</mat-chip-option>
+      <mat-chip-option value="Outros">Outros</mat-chip-option>
+    </mat-chip-listbox> -->
+    <mat-chip-listbox [(ngModel)]="produto.categoria" multiple>
+      <mat-chip-option *ngFor="let categ of categorias" [value]="categ">{{ categ }}</mat-chip-option>
+    </mat-chip-listbox>
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="voltar()">Cancelar</button>
+      <button class="item-acao" mat-raised-button color="primary" (click)="inserir()">Cadastrar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

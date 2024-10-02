@@ -1,0 +1,43 @@
+.listagem {
+    display: grid;
+    gap: 16px; /* Espaçamento entre os itens */
+    padding: 20px; /* Espaçamento interno da listagem */
+    width: 100%; /* Garante que a lista ocupe 100% da largura disponível */
+    box-sizing: border-box; /* Inclui padding no cálculo de largura */
+}
+
+app-card-produto {
+    width: 100%; /* O card ocupará toda a largura da coluna do grid */
+    // height: 350px; /* Altura fixa de 350px */
+    box-sizing: border-box; /* Garante que o padding e as bordas sejam incluídos no cálculo de largura */
+}
+
+@media (min-width: 1200px) {
+    .listagem {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .listagem {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .listagem {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .listagem {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .listagem {
+        grid-template-columns: 1fr;
+    }
+}
